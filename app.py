@@ -52,5 +52,15 @@ def submit_todo():
     })
     return {"status": "success"}
 
+@app.route('/submittodoitem', methods=['POST'])
+def submit_todo():
+    data = request.json
+    db.todo.insert_one({
+        "itemName": data.get("itemName"),
+        "itemDescription": data.get("itemDescription")
+    })
+    return {"status": "success"}
+
+
 if __name__ == "__main__":
     app.run(debug=True)
