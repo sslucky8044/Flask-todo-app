@@ -1,4 +1,5 @@
 {
-  "message": "Hello from the API",
-  "status": "ok"
+  "message": "Updated JSON message",
+  "status": "success",
+  "version": "2.0"
 }
